@@ -10,5 +10,5 @@
 coverage
 *.log
 TODO
-.env
-!.env.example
+*.env
+!*.env.example

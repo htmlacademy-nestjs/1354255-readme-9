@@ -1,5 +1,11 @@
 export enum AuthError {
-  USER_EXISTS = 'User with this email exists',
-  USER_NOT_FOUND = 'User not found',
-  USER_PASSWORD_WRONG = 'User password is wrong',
+  UserExists = 'User with this email exists',
+  UserNotFound = 'User not found',
+  UserCredentialsWrong = 'User Password or Login is wrong',
 }
+
+export const AuthResponseMessage = {
+  LoggedSuccess: 'User has been successfully logged.',
+  UserFound: 'User found',
+  UserCreated: 'The new user has been successfully created.',
+} as const;

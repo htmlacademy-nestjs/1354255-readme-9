@@ -29,7 +29,7 @@ export class AuthService {
     const existUser = await this.blogUserRepository.findByEmail(email);
 
     if (existUser) {
-      throw new ConflictException(AuthError.USER_EXISTS);
+      throw new ConflictException(AuthError.UserExists);
     }
 
     const userEntity = await new BlogUserEntity(blogUser).setPassword(password)
@@ -44,11 +44,11 @@ export class AuthService {
     const existUser = await this.blogUserRepository.findByEmail(email);
 
     if (!existUser) {
-      throw new NotFoundException(AuthError.USER_NOT_FOUND);
+      throw new NotFoundException(AuthError.UserNotFound);
     }
 
     if (!await existUser.comparePassword(password)) {
-      throw new UnauthorizedException(AuthError.USER_PASSWORD_WRONG);
+      throw new UnauthorizedException(AuthError.UserCredentialsWrong);
     }
 
     return existUser;
@@ -58,7 +58,7 @@ export class AuthService {
     const user = await this.blogUserRepository.findById(id);
 
     if (!user) {
-      throw new NotFoundException(AuthError.USER_NOT_FOUND);
+      throw new NotFoundException(AuthError.UserNotFound);
     }
 
     return user;

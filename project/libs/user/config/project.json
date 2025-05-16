@@ -1,0 +1,9 @@
+{
+  "name": "user-config",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/user/config/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project user-config --web",
+  "targets": {}
+}
