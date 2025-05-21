@@ -18,11 +18,13 @@
     "baseUrl": ".",
     "paths": {
       "@project/auth": ["libs/user/auth/src/index.ts"],
+      "@project/blog-comment": ["libs/blog/blog-comment/src/index.ts"],
+      "@project/blog-models": ["libs/blog/models/src/index.ts"],
       "@project/blog-user": ["libs/user/blog-user/src/index.ts"],
-      "@project/user-config": ["libs/user/config/src/index.ts"],
       "@project/data-access": ["libs/shared/data-access/src/index.ts"],
       "@project/shared/core": ["libs/shared/core/src/index.ts"],
-      "@project/shared/helpers": ["libs/shared/helpers/src/index.ts"]
+      "@project/shared/helpers": ["libs/shared/helpers/src/index.ts"],
+      "@project/user-config": ["libs/user/config/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
